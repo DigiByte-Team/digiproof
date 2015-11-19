@@ -10,6 +10,35 @@
     <script src="/js/index.js"></script>
   </head>
   <body>
-    <p>Congratulations your Tx has sucessfully been sent. The txid is: <%= transaction %> and you can view it on the blockchain at <a href="http://digiexplorer.info/tx/<%= transaction %>"> Digiexplorer.info</a> </p>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="brand" href="/">DigiByte Proof of Existence</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="./">Prove</a></li>
+                <li><a href="./about">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top:60px;">
+
+      <div class="row">
+        <div class="panel">
+          <div class="panel-heading">
+            <h3>Message Sucessfully Embedded!</h3>
+          </div>
+          <div class="panel-body">
+            <p>Congratulations your Tx has sucessfully been sent. The txid is: <%= transaction %> and you can view it on the blockchain at <a href="http://digiexplorer.info/tx/<%= transaction %>"> Digiexplorer.info</a> </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
   </body>
 </html>

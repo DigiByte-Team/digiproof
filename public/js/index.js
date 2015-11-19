@@ -35,39 +35,13 @@ $(document).ready(function() {
 		
 	}
 
-	// latest documents
-	var refreshLatest = function(confirmed, table) {
-		$.getJSON('/api/document/latest?confirmed='+confirmed, function(data) {
-			var items = [];
-
-			items.push('<thead><tr><th></th><th>' + 'Document Digest' + '</th><th>'
-			  + 'Timestamp' + '</th></tr></thead>');
-			$.each(data, function(index, obj) {
-				badge = "";
-				if (obj.tx) {
-					badge = '<span class="label label-success">✔</span>';
-				}
-				items.push('<tr><td>'+badge+'</td><td><a href="/detail/' + obj.digest+'">'+obj.digest +
-						'</a></td><td> ' + obj.timestamp + '</td></tr>');
-			});
-
-			table.empty();
-			$('<div/>', {
-				'class' : 'unstyled',
-				html : items.join('<br />')
-			}).appendTo(table);
-		});
-	}
-	refreshLatest("false", latest);
-	refreshLatest("true", latest_confirmed);
-
 	// client-side hash
 	var onRegisterSuccess = function(json) {
 		console.log(json);
 		if (json.SHADigest) {
 			window.setTimeout(function() {
 				window.location.replace("/document/"+json.SHADigest);
-			}, 5000);
+			}, 2000);
 		}
 	}
 
