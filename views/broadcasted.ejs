@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Payment Received and Tx has been sent!</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/css/main.css' />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/js/filedrop.js"></script>
+    <script src="/js/crypto.js"></script>
+    <script src="/js/index.js"></script>
+  </head>
+  <body>
+    <p>Congratulations your Tx has sucessfully been sent. The txid is: <%= transaction %> and you can view it on the blockchain at <a href="http://digiexplorer.info/tx/<%= transaction %>"> Digiexplorer.info</a> </p>
+  </body>
+</html>

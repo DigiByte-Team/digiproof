@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Awaiting Tx for document: <%= documentHash %></title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/css/main.css' />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/js/filedrop.js"></script>
+    <script src="/js/crypto.js"></script>
+    <script src="/js/index.js"></script>
+    <script>
+	setTimeout(function(){
+	   window.location.reload(1);
+	}, 10000);
+	</script>
+  </head>
+  <body>
+    <p>Please send 1DGB to <b><%= addr %></b> (This covers the min fee and will make sure the tx is broadcasted as a priority)</p>
+  </body>
+</html>
